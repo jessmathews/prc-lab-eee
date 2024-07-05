@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int i,j;
 void read(int a[][100],int m,int n);
@@ -11,7 +12,7 @@ int main() {
     system("clear");
     int a_rows,a_cols,b_rows,b_cols,choice;
     printf("Enter rows of Matrix A:");
-    scanf("%d",a_rows);
+    scanf("%d",&a_rows);
     printf("Enter columns of Matrix A:");
     scanf("%d",&a_cols);
     int a[a_rows][a_cols];
@@ -67,15 +68,13 @@ int main() {
 }
 void read(int a[][100],int m,int n) {
     printf("Enter the elements:");
-    for ( i = 0; i < m; i++)
+    for (i=0;i < m; i++)
     {
         for ( j = 0; j < n; i++)
         {
             scanf("%d",&a[i][j]);
-        }
-        
+        }   
     }
-    
 }
 
 void sum(int a[][100],int m,int n,int b[][100]) {
